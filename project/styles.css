@@ -1,0 +1,195 @@
+body, html {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1f1f1f; 
+    color: #f8f7f9;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.ProjectPage {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.TopContainer {
+    background-color: #222; 
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.WebsiteLogo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #dab684; 
+    text-decoration: none;
+}
+
+.NavbarLinks {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.NavbarLinks a {
+    color: #f8f7f9;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.NavbarLinks a.active {
+    color: #f6c700; 
+}
+
+.NavbarLinks a:hover {
+    color: #f6c700;
+    text-decoration: underline;
+}
+
+.MainContainer {
+    flex: 1;
+    padding: 0px 80px;
+    background-color: #1b1b1b; 
+}
+
+.Projects_List h1 {
+    color: #f6c700; 
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.Projects_List ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.Projects_List li {
+    background-color: #2e2e2e; 
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.Projects_List li:hover {
+    background-color: #3e3e3e;
+}
+
+.Projects_List h2 {
+    color: #f8f7f9;
+    font-size: 24px;
+    margin: 0 0 10px;
+}
+
+.Projects_List p::before {
+    content: "⭐️"; 
+    margin-right: 10px; 
+    font-size: 10px; 
+    color: #c9b661; 
+    color: #d1d1d1;
+    font-size: 16px;
+}
+
+.Projects_List a {
+    color: #f6c700; 
+    text-decoration: none;
+}
+
+.Projects_List a:hover {
+    text-decoration: underline;
+}
+
+.Footer {
+    background-color: #222;
+    color: #f8f7f9;
+    text-align: center;
+    padding: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .TopContainer {
+        padding: 15px 20px; 
+    }
+
+    .WebsiteLogo {
+        display: none;
+    }
+
+    .NavbarLinks {
+        gap: 15px; 
+        font-size: 12px; 
+    }
+
+    .MainContainer {
+        padding: 15px 20px; 
+    }
+
+    .Projects_List h1 {
+        font-size: 28px; 
+    }
+
+    .Projects_List li {
+        padding: 10px; 
+    }
+
+    .Projects_List h2 {
+        font-size: 18px; 
+    }
+
+    .Projects_List p {
+        font-size: 14px; 
+    }
+
+    .Footer {
+        padding: 5px 0; 
+    }
+}
+
+@media (max-width: 480px) {
+    .TopContainer {
+        justify-content: center;
+        padding: 10px 15px; 
+    }
+    
+    .NavbarLinks {
+        gap: 10px; 
+        font-size: 10px; 
+    }
+    
+    .NavbarLinks a {
+        color: #f8f7f9;
+        text-decoration: none;
+        font-size: 10px;
+    }
+    
+    .MainContainer {
+        padding: 10px 15px; 
+    }
+
+    .Projects_List h1 {
+        font-size: 24px; 
+    }
+
+    .Projects_List li {
+        padding: 8px; 
+        margin-bottom: 10px;
+    }
+
+    .Projects_List h2 {
+        font-size: 16px; 
+    }
+
+    .Projects_List p {
+        font-size: 12px; 
+    }
+
+    .Footer {
+        padding: 0; 
+    }
+}

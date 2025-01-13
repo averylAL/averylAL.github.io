@@ -1,0 +1,249 @@
+body, html {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1f1f1f; 
+    color: #f8f7f9;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.ContactPage {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.TopContainer {
+    background-color: #222; 
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.WebsiteLogo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #dab684; 
+    text-decoration: none;
+}
+
+.NavbarLinks {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.NavbarLinks a {
+    color: #f8f7f9;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.NavbarLinks a.active {
+    color: #f6c700; 
+}
+
+.NavbarLinks a:hover {
+    color: #f6c700;
+    text-decoration: underline;
+}
+
+.MainContainer {
+    flex: 1; 
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    gap: 20px; 
+    padding: 20px;
+    align-items: center;
+    background-color: #1b1b1b; 
+    color: #f8f7f9;
+}
+
+.LeftBlock {
+    background-color: #2e2e2e; 
+    height: 60%;
+    border-radius: 10px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin-left: 20px; 
+}
+
+.Square {
+    width: 100px; 
+    height: 100px; 
+    background-color: #f6c700;  
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+}
+
+.Square:hover {
+    transform: scale(1.2);
+    background-color: #1a52ac; 
+}
+
+.ContactInfo {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ContactInfo h1 {
+    font-size: 36px;
+    color: #f6c700;
+    margin-top: 5px;
+    margin-bottom: 50px;   
+}
+
+.ContactInfo ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.ContactInfo ul li {
+    font-size: 18px;
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.ContactInfo ul li a {
+    color: #f6c700;
+    text-decoration: none;
+}
+
+.ContactInfo ul li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+    background-color: #222;
+    color: #f8f7f9;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .TopContainer {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .NavbarLinks {
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .MainContainer {
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto auto; 
+    }
+
+    .LeftBlock {
+        justify-content: center;
+        align-items: center;
+        background-color: #3e3e3e;
+        height: auto;
+        padding: 20px; 
+    }
+
+    .Square {
+        width: 80px; 
+        height: 80px; 
+    }
+
+    .ContactInfo h1 {
+        font-size: 28px;
+    }
+
+    .ContactInfo ul li {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .TopContainer {
+        padding: 10px;
+    }
+    
+    .WebsiteLogo a {
+        font-size: 14px;
+    }
+    
+    .NavbarLinks {
+        gap: 8px;
+    }
+    
+    .NavbarLinks a {
+        color: #f8f7f9;
+        text-decoration: none;
+        font-size: 10px;
+    }
+    
+    .MainContainer {
+        flex: 1; 
+        display: grid;
+        grid-template-columns: 1fr; 
+        padding: 5px;
+        align-items: center;
+    }
+    
+    .LeftBlock {
+        width: 100%; 
+        height: 50%;
+        border-radius: 10px;
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        padding: 0;
+        margin: 0;
+    }
+    
+    .Square {
+        width: 50px; 
+        height: 50px; 
+    }
+    
+    .Square:hover {
+        transform: scale(1.2);
+        background-color: #1a52ac; 
+    }
+    
+    .ContactInfo {
+        width: 100%;
+        padding: 0px;
+    }
+    
+    .ContactInfo h1 {
+        font-size: 18px;
+        color: #f6c700;
+        margin-top: 5px;
+        margin-bottom: 10px;   
+    }
+    
+    .ContactInfo ul li {
+        font-size: 12px;
+    }
+    
+    footer {
+        font-size: 10px;
+        bottom: 0;
+        width: 100%;
+        background-color: #222;
+        color: #f8f7f9;
+        text-align: center;
+        padding: 0;
+        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.5);
+    }
+}
