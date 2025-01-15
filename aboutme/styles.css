@@ -1,0 +1,100 @@
+body, html {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1f1f1f;
+    color: #f8f7f9;
+    line-height: normal;
+    margin: 0;
+    overflow-x: hidden; 
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+    background: linear-gradient(
+      135deg, #1b1b1b 0%, #2e2e2e 50%, #3e3e3e 100%);
+}
+
+.TopContainer {
+    background-color: #222; 
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.WebsiteLogo {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.NavbarLinks {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.NavbarLinks a {
+    color: #f8f7f9;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.NavbarLinks a.active {
+    color: #f6c700; 
+}
+
+.NavbarLinks a:hover {
+    color: #f6c700;
+    text-decoration: underline;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 90px;
+    background-color: #222;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: white;
+    margin: 0;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 50px 90px;
+    gap: 40px;
+}
+
+.main .about {
+    max-width: 100%;
+}
+
+.main h2 {
+    color: #fbfbfb;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.timeline {
+    border-left: 3px solid #f6c700;
+    padding-left: 20px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-item {
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline-item::before

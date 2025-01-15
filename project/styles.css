@@ -21,19 +21,15 @@ body, html {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.WebsiteLogo a {
-    font-size: 24px;
+.WebsiteLogo {
+    font-size: 18px;
     font-weight: bold;
-    color: #dab684; 
-    text-decoration: none;
+    color: white;
 }
 
 .NavbarLinks {
     display: flex;
     gap: 30px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
 }
 
 .NavbarLinks a {
@@ -53,7 +49,7 @@ body, html {
 
 .MainContainer {
     flex: 1;
-    padding: 0px 80px;
+    padding: 40px 80px;
     background-color: #1b1b1b; 
 }
 
@@ -64,132 +60,96 @@ body, html {
     margin-bottom: 30px;
 }
 
-.Projects_List ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.Projects_List li {
-    background-color: #2e2e2e; 
+.Project_Item {
+    background-color: #2e2e2e;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
     transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.Projects_List li:hover {
+.Project_Item:hover {
     background-color: #3e3e3e;
 }
 
-.Projects_List h2 {
-    color: #f8f7f9;
+.Project_Image {
+    flex: 1;
+    max-width: 40%;
+}
+
+.Project_Image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.Project_Image img:hover {
+    transform: scale(1.05);
+}
+
+.Project_Description {
+    flex: 2;
+}
+
+.Project_Description h2 {
     font-size: 24px;
-    margin: 0 0 10px;
+    margin-bottom: 10px;
+    color: #f6c700;
 }
 
-.Projects_List p::before {
-    content: "⭐️"; 
-    margin-right: 10px; 
-    font-size: 10px; 
-    color: #c9b661; 
-    color: #d1d1d1;
-    font-size: 16px;
+.Project_Description p {
+    margin-bottom: 15px;
+    line-height: 1.8;
 }
 
-.Projects_List a {
-    color: #f6c700; 
+.Project_Description a {
+    color: #f6c700;
     text-decoration: none;
 }
 
-.Projects_List a:hover {
+.Project_Description a:hover {
     text-decoration: underline;
 }
 
-.Footer {
-    background-color: #222;
-    color: #f8f7f9;
+.Button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #f5f4f7; 
+    border: 1px solid #f8f7f9; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    margin-right: 10px; 
+    background-color: transparent; 
+    cursor: pointer;
+}
+
+.footer {
     text-align: center;
-    padding: 5px 0;
+    padding: 20px;
+    background-color: #222;
+    font-size: 14px;
 }
 
 @media (max-width: 768px) {
-    .TopContainer {
-        padding: 15px 20px; 
+    .Project_Item {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .WebsiteLogo {
-        display: none;
+    .Project_Image {
+        max-width: 100%;
+        margin-bottom: 15px;
     }
 
-    .NavbarLinks {
-        gap: 15px; 
-        font-size: 12px; 
-    }
-
-    .MainContainer {
-        padding: 15px 20px; 
-    }
-
-    .Projects_List h1 {
-        font-size: 28px; 
-    }
-
-    .Projects_List li {
-        padding: 10px; 
-    }
-
-    .Projects_List h2 {
-        font-size: 18px; 
-    }
-
-    .Projects_List p {
-        font-size: 14px; 
-    }
-
-    .Footer {
-        padding: 5px 0; 
-    }
-}
-
-@media (max-width: 480px) {
-    .TopContainer {
-        justify-content: center;
-        padding: 10px 15px; 
-    }
-    
-    .NavbarLinks {
-        gap: 10px; 
-        font-size: 10px; 
-    }
-    
-    .NavbarLinks a {
-        color: #f8f7f9;
-        text-decoration: none;
-        font-size: 10px;
-    }
-    
-    .MainContainer {
-        padding: 10px 15px; 
-    }
-
-    .Projects_List h1 {
-        font-size: 24px; 
-    }
-
-    .Projects_List li {
-        padding: 8px; 
-        margin-bottom: 10px;
-    }
-
-    .Projects_List h2 {
-        font-size: 16px; 
-    }
-
-    .Projects_List p {
-        font-size: 12px; 
-    }
-
-    .Footer {
-        padding: 0; 
+    .Project_Description {
+        text-align: left;
     }
 }
