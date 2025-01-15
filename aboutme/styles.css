@@ -97,4 +97,179 @@ body, html {
     padding-left: 30px;
 }
 
-.timeline-item::before
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 8px; 
+    transform: translateY(0);
+    width: 15px;
+    height: 15px;
+    background-color: #f6c700;
+    border-radius: 50%;
+}
+
+.timeline-item h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #f6c700;
+    line-height: 1.6;
+}
+
+.timeline-item p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #ebe7e7;
+}
+
+.timeline-item p span.location {
+    color: #f5f2f2;
+    font-size: 14px;
+}
+
+.work-details {
+    margin-bottom: 10px;
+}
+  
+.work-details h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #f6c700;
+}
+  
+.work-details p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #cccccc;
+}
+  
+.work-details p .location {
+    color: #f6c700;
+}
+  
+.responsibilities {
+    margin: 10px 0;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+  
+.responsibilities li {
+    margin-bottom: 5px;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #222;
+    color: #cac5c5; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; 
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); 
+    box-sizing: border-box; 
+}
+
+.Footer_Content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.Footer_Icons {
+    display: flex;
+    gap: 15px;
+}
+
+.Footer_Icons img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .TopContainer {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .NavbarLinks {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .main {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .timeline-item h3 {
+        font-size: 16px;
+    }
+
+    .timeline-item p {
+        font-size: 14px;
+    }
+
+    .responsibilities li {
+        font-size: 14px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+
+    .Footer_Icons img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .NavbarLinks a {
+        font-size: 14px;
+    }
+
+    .main h2 {
+        font-size: 20px;
+    }
+
+    .timeline-item h3 {
+        font-size: 14px;
+    }
+
+    .timeline-item p {
+        font-size: 12px;
+    }
+
+    .responsibilities li {
+        font-size: 12px;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+
+    .Footer_Icons img {
+        width: 18px;
+        height: 18px;
+    }
+}

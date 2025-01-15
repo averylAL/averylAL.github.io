@@ -1,319 +1,420 @@
-  body, html {
-    font-family: 'Poppins', sans-serif;
-    background-color: #1f1f1f;
-    color: #f8f7f9;
-    line-height: normal;
-    margin: 0;
-    overflow-x: hidden; 
-  }
+/* General Styles */
+body, html {
+  font-family: 'Poppins', sans-serif;
+  background-color: #1f1f1f;
+  color: #f8f7f9;
+  margin: 0;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
 
-  .HomePage {
-    display: grid;
-    grid-template-rows: auto 1fr; 
-    min-height: 100vh;
-    background: linear-gradient(
-      135deg, #1b1b1b 0%, #2e2e2e 50%, #3e3e3e 100%);
-  }
-  
-  .TopContainer {
-    position: relative;
-    grid-row: 1; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 90px;
-    background-color: #222;
-  }
-  
-  .WebsiteLogo {
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-  }
-  
-  .NavigationBar {
-    display: flex;
-    gap: 50px;
-  }
-  
-  .NavigationBar a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
+.HomePage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1b1b1b 0%, #2e2e2e 50%, #3e3e3e 100%);
+}
 
-  .NavigationBar a.active {
-    color: #f6c700; 
-  }
-  
-  .NavigationBar a:hover {
-    text-decoration: underline;
-  }
-  
-  .MainContainer {
-    grid-row: 2; 
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    padding: 0px 90px;
-    gap: 20px;
-    align-items: center;
-  }
+/* Top Navigation */
+.TopContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #222;
+}
 
-  .Introduction_Text_Container {
-    flex: 1;
-    text-align: left;
-  }
-  
-  .GreetingContent {
-    font-size: 20px;
-    color: white;
-    margin-bottom: 20px;
-  }
-  
-  .Occupation{
-    color: #f6c700;
-  }
-  
-  .PreferredName {
-    font-size: 64px;
-    margin: 10px 0;
-    font-weight: bold;
-    color: white;
-    line-height: 1.2;
-  }
+.WebsiteLogo {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
 
-  .PreferredName span {
-    display: block;
-  }
-  
-  .Welcome_Text_Content {
-    font-size: 18px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-  
-  .ResumeButton {
-    background-color: #fcab4a;
-    color: rgb(0, 0, 0);
-    border: none;
-    padding: 15px 30px;
-    border-radius: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .ResumeButton:hover {
-    background-color: #5c79eb;
-  }
-  
-  .HeadShotContainer {
-    grid-column: 2; 
-    position: relative;
-    display: grid;
-    grid-template-rows: auto 1fr; 
-    grid-template-columns: 1fr 1fr; 
-    align-items: center;
-    width: 600px;
-    height: 450px;
-    border-radius: 10px;
-  }
-  
-  .HeadShotContainer img {
-    grid-row: 1 / span 2; 
-    grid-column: 1 / span 2; 
-    width: 100%;
-    height: 100%;
-    border-radius: 5%;
-    object-fit: cover;
-    /* filter: blur(4px); */
-    position: absolute;
-    z-index: 1;
-  }
+.NavigationBar {
+  display: flex;
+  gap: 50px;
+}
 
-  .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background-color: #222;
-    color: #cac5c5; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 30px;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); 
+.NavigationBar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.NavigationBar a.active {
+  color: #f6c700;
+}
+
+.NavigationBar a:hover {
+  text-decoration: underline;
+}
+
+/* Main Container */
+.MainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.Introduction_Text_Container {
+  margin-bottom: 40px;
+}
+
+.GreetingContent {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: white;
+  text-align: center;
+}
+
+.Occupation {
+  color: #f6c700;
+  text-align: center;
+}
+
+.PreferredName {
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.Welcome_Text_Content {
+  font-size: 18px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.DynamicLine {
+  width: 200px;
+  height: 4px;
+  margin: 20px auto 0;
+  background: linear-gradient(to right, #f6c700, #fcab4a, #5c79eb);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scaleX(0.8);
+  }
+  50% {
+    transform: scaleX(1);
+  }
+}
+
+.HeadShotContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.AnimatedArrow {
+  font-size: 40px;
+  color: #f6c700;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+/* About Me Section */
+.main {
+  display: block;
+  padding: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left; /* Ensure left alignment */
+}
+
+.about h2 {
+  font-size: 24px;
+  color: #e8e7e4;
+  margin-bottom: 20px;
+}
+
+.timeline {
+  border-left: 3px solid #f6c700;
+  padding-left: 20px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 8px;
+  width: 15px;
+  height: 15px;
+  background-color: #f6c700;
+  border-radius: 50%;
+}
+
+.timeline-item h3 {
+  font-size: 18px;
+  color: #f6c700;
+  margin-bottom: 5px;
+}
+
+.timeline-item p {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #ebe7e7;
+}
+
+.responsibilities {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.responsibilities li {
+  margin-bottom: 5px;
+  line-height: 1.6;
+  color: #cccccc;
+}
+
+/* Projects Section */
+.MainContainer {
+  flex: 1;
+  padding: 40px 60px;
+  background-color: #1b1b1b; 
+  text-align: left;
+}
+
+.Projects_List h1 {
+  color: #f6c700; 
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.Project_Item {
+  background-color: #2e2e2e;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Project_Item:hover {
+  background-color: #3e3e3e;
+}
+
+.Project_Image {
+  flex: 1;
+  max-width: 40%;
+}
+
+.Project_Image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.Project_Image img:hover {
+  transform: scale(1.05);
+}
+
+.Project_Description {
+  flex: 2;
+}
+
+.Project_Description h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #f6c700;
+}
+
+.Project_Description p {
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+.Project_Description a {
+  color: #f6c700;
+  text-decoration: none;
+}
+
+.Project_Description a:hover {
+  text-decoration: underline;
+}
+
+.Button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #f5f4f7; 
+  border: 1px solid #f8f7f9; 
+  border-radius: 5px; 
+  text-decoration: none; 
+  margin-right: 10px; 
+  background-color: transparent; 
+  cursor: pointer;
+  margin: 5px;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222;
+  color: #cac5c5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+  gap: 10px; /* Add spacing between elements */
 }
 
 .Footer_Content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.Footer_Content span {
-    font-size: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .Footer_Icons {
-    display: flex;
-    gap: 15px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .Footer_Icons img {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
-  
 
-  @media (max-width: 768px) {
-    .MainContainer {
-      display: flex;
-      flex-direction: column; 
-      align-items: center;
-      padding: 0px 20px;
-      margin-top: 40px;
-      margin-bottom: 450px;
-    }
-  
-    .Introduction_Text_Container {
-      width: 100%;
-      text-align: center;
-      margin-bottom: 50px;
-    }
-  
-    .PreferredName {
-      font-size: 36px;
-    }
-  
-    .ResumeButton {
-      padding: 10px 20px;
-    }
-  
-    .GreetingContent {
-      font-size: 18px;
-    }
-  
-    .Welcome_Text_Content {
-      font-size: 16px;
-    }
-  
-    .AboutMeTextContainer h2 {
-      font-size: 24px;
-    }
-
-    .HeadShotContainer {
-      position: relative;
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      margin-top: 20px; 
-      display: block; 
-    }
-  
-    .HeadShotContainer img {
-      width: 100%;
-      height: auto;
-      display: block; 
-    }
-
-    .TopContainer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-      padding: 20px 0;
-      background-color: #222;
-    }
-  
-    .NavigationBar {
-      gap: 20px;
-    }
-  
-    .NavigationBar a {
-      font-size: 14px;
-    }
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .TopContainer {
+    flex-direction: column;
+    padding: 20px;
   }
-  
-  @media (max-width: 480px) {
-    .TopContainer {
-      position: relative;
-      bottom: 0;
-      padding: 10px 10px;
-      width: 100%;
-      background-color: #222; 
-      z-index: 1000; 
-      flex-direction: column;
-      align-items: center; 
-      justify-content: center;
-    }
 
-    .WebsiteLogo {
-      font-size: 12px;
-      text-align: center;
-      margin-left: 5px;
-      color: #dab684; 
-    }
-  
-    .NavigationBar {
-      gap: 20px;
-      justify-content: center;
-      display: flex;
-      margin-right: 5px;
-    }
-
-    .NavigationBar a {
-      font-size: 15px;
-    }
-
-    .MainContainer {
-      display: flex;
-      flex-direction: column;
-      padding: 10px 10px;
-      margin-bottom: 150px;
-    }
-  
-    .Introduction_Text_Container {
-      max-width: 100%;
-      text-align: center;
-      padding: 0;
-    }
-  
-    .GreetingContent {
-      font-size: 14px;
-      margin-bottom: 80px;
-    }
-  
-    .PreferredName {
-      font-size: 24px;
-    }
-  
-    .ResumeButton {
-      padding: 8px 16px;
-    }
-  
-    .HeadShotContainer {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin-top: 5px;
-      padding-bottom: 20px;
-    }
-
-    .HeadShotContainer img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-
+  .NavigationBar {
+    gap: 20px;
+    margin-top: 10px;
   }
-  
-     
-  
-  
-  
+
+  .MainContainer, .about, .Projects_List {
+    padding: 20px;
+  }
+
+  .main {
+    padding: 20px;
+  }
+
+  .Project_Item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Project_Image {
+    max-width: 100%;
+  }
+
+  .Projects_List h1 {
+    font-size: 28px;
+  }
+
+  .Button {
+    font-size: 13px; /* Adjust font size for smaller screens */
+    padding: 8px 16px;
+  }
+
+  .footer {
+    flex-direction: column; /* Stack footer elements vertically */
+    align-items: center;
+    gap: 10px;
+    padding: 15px; /* Increase padding for better touch usability */
+  }
+
+  .Footer_Content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .Footer_Icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .TopContainer {
+    padding: 10px;
+  }
+
+  .NavigationBar a {
+    font-size: 14px;
+  }
+
+  .PreferredName {
+    font-size: 32px;
+  }
+
+  .GreetingContent {
+    font-size: 16px;
+  }
+
+  .DynamicLine {
+    width: 150px;
+  }
+
+  .Project_Item {
+    text-align: center;
+  }
+
+  .Button {
+    font-size: 12px; /* Further reduce button font size for very small screens */
+    padding: 6px 12px;
+    margin: 5px 0; /* Adjust spacing for stacking buttons */
+  }
+
+  .footer {
+    padding: 10px; 
+  }
+
+  .Footer_Content {
+    gap: 8px;
+  }
+
+  .Footer_Icons {
+    gap: 10px;
+  }
+}
