@@ -176,4 +176,95 @@ body, html {
     }
 
     .NavbarLinks {
-        flex-direction: col
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .NavbarLinks a {
+        font-size: 14px;
+    }
+
+    .MainContainer {
+        padding: 20px;
+    }
+
+    .Projects_List h1 {
+        font-size: 28px;
+    }
+
+    .Project_Item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Project_Image {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .Project_Description h2 {
+        font-size: 20px;
+    }
+
+    .Project_Description p {
+        font-size: 14px;
+    }
+
+    .Project_Description a {
+        font-size: 12px;
+    }
+
+    .Button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+
+    .Footer_Icons img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .NavbarLinks a {
+        font-size: 12px;
+    }
+
+    .MainContainer {
+        padding: 15px;
+    }
+
+    .Projects_List h1 {
+        font-size: 24px;
+    }
+
+    .Project_Description h2 {
+        font-size: 18px;
+    }
+
+    .Project_Description p {
+        font-size: 12px;
+    }
+
+    .Project_Description a {
+        font-size: 10px;
+    }
+
+    .Button {
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+
+    .Footer_Icons img {
+        width: 18px;
+        height: 18px;
+    }
+}
