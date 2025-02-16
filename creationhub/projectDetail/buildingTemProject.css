@@ -1,0 +1,69 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    padding: 0;
+    text-align: center;
+}
+
+/* Main content container */
+.container {
+    max-width: 800px; /* Limits content width for better readability */
+    margin: auto;
+    text-align: left; /* Aligns text to the left */
+    padding: 20px;
+}
+
+/* Poster image styling */
+.poster img {
+    width: 100%; /* Makes image responsive */
+    max-width: 800px; /* Ensures image does not exceed content width */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    display: block;
+    margin: 20px auto; /* Centers the image with spacing */
+}
+
+/* Button styling */
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #dcaf26;
+}
+
+/* Responsive Design */
+
+/* 📌 For tablets and smaller screens (width ≤ 768px) */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%; /* Expands content to full width */
+        padding: 10px; /* Reduces padding */
+    }
+    h1 {
+        font-size: 22px; /* Adjusts title size */
+    }
+    p {
+        font-size: 14px; /* Optimizes text for mobile readability */
+    }
+    .poster img {
+        max-width: 100%; /* Ensures the image scales properly */
+    }
+}
+
+/* 📌 For mobile devices (width ≤ 480px) */
+@media (max-width: 480px) {
+    .button {
+        width: 100%; /* Makes buttons full-width for easy tapping */
+        padding: 12px; /* Increases touch area */
+        font-size: 16px; /* Adjusts font size */
+    }
+}

@@ -1,0 +1,114 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: left;
+}
+
+/* Main Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Section Styling */
+.section {
+    margin: 20px 0;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Header Section */
+.header {
+    background: linear-gradient(to right, #007bff, #00d4ff);
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+/* Overview Section */
+.overview {
+    background: white;
+}
+
+/* Features Section */
+.features {
+    background: #eef5ff;
+    text-align: left;
+}
+
+/* Video Section */
+.video-section {
+    background: white;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    margin: 20px 10px;
+    padding: 12px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: #ff8c00;
+}
+
+/* Video Styling */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+video {
+    width: 100%;
+    max-width: 720px;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+
+/* 📌 For tablets and smaller screens (width ≤ 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    .section {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    p {
+        font-size: 14px;
+    }
+    video {
+        max-width: 100%;
+    }
+}
+
+/* 📌 For mobile devices (width ≤ 480px) */
+@media (max-width: 480px) {
+    .button {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+    }
+}
