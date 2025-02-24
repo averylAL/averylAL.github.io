@@ -1,0 +1,221 @@
+/* General Styles */
+body, html {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1d1c1c;
+    color: #fefeff;
+    margin: 0;
+    overflow-x: hidden;
+    line-height: 1.7;
+}
+  
+.HomePage {
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+background: linear-gradient(135deg, #272727 0%, #2a2a2a 50%, #3f3f3f 100%);
+}
+
+/* Top Navigation */
+.TopContainer {
+    background-color: #222; 
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.WebsiteLogo {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.NavbarLinks {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.NavbarLinks a {
+    color: #f8f7f9;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.NavbarLinks a.active {
+    color: #f6c700; 
+}
+
+.NavbarLinks a:hover {
+    color: #f6c700;
+    text-decoration: underline;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 90px;
+    background-color: #222;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: white;
+    margin: 0;
+}
+
+
+/* Skill Section */
+.skills-section {
+    padding: 105px 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-section h1 {
+    font-family: 'YesevaOne-Regular', serif;
+    font-size: 2.4em;
+    color: rgb(244, 214, 85);
+    margin-bottom: 42px;
+    text-align: left;
+}
+
+.skill-category {
+    margin-bottom: 22px;
+}
+
+.skill-category h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.7em;
+    margin-top: 48px;
+    font-weight: bold;
+    color: rgb(244, 214, 85);
+    margin-bottom: 18px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 11px;
+}
+
+.tag {
+    background-color: rgba(240, 239, 239, 0.1);
+    color: rgb(245, 244, 242);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: 'ABeeZee-Regular';
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.tag:hover {
+    background-color: rgba(137, 114, 45, 0.38);
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #222;
+    color: #cac5c5; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; 
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); 
+    box-sizing: border-box; 
+}
+
+.Footer_Content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.Footer_Icons {
+    display: flex;
+    gap: 15px;
+}
+
+.Footer_Icons img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .TopContainer {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .NavbarLinks {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .NavbarLinks a {
+        font-size: 14px;
+    }
+
+    .MainContainer {
+        padding: 20px;
+    }
+
+    .skills-section {
+        padding: 80px 20px;
+    }
+
+    .skills-section h1 {
+        font-size: 2em;
+    }
+
+    .skill-category h2 {
+        font-size: 1.5em;
+    }
+
+    .tag {
+        font-size: 0.9em;
+        padding: 5px 8px;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+
+    .Footer_Icons img {
+        width: 20px;
+        height: 20px;
+    }
+
+    @media (max-width: 480px) {
+        .NavbarLinks a {
+            font-size: 12px;
+        }
+    
+        .MainContainer {
+            padding: 15px;
+        }
+
+        .footer {
+            padding: 10px;
+        }
+    
+        .Footer_Icons img {
+            width: 18px;
+            height: 18px;
+        }
+    }
+}

@@ -70,11 +70,37 @@ body, html {
     gap: 20px;
     align-items: center;
     transition: background-color 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1.1);
 }
 
 .Project_Item:hover {
-    background-color: #3e3e3e;
+    background-color: #d5c058;
+    color: #333;
+}
+
+.Project_Description,
+.Project_Description h2,
+.Project_Description p,
+.Project_Description a {
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+}
+
+.Project_Item:hover .Project_Description {
+  color: #333;
+}
+
+.Project_Item:hover .Project_Description h2 {
+  color: #111;
+}
+
+.Project_Item:hover .Project_Description p {
+  color: #444; 
+}
+
+.Project_Item:hover .Project_Description a {
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
 }
 
 .Project_Image {

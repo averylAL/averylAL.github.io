@@ -1,0 +1,268 @@
+body, html {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1f1f1f; 
+    color: #f8f7f9;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.ProjectPage {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.TopContainer {
+    background-color: #222; 
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.WebsiteLogo {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.NavbarLinks {
+    display: flex;
+    gap: 30px;
+}
+
+.NavbarLinks a {
+    color: #f8f7f9;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.NavbarLinks a.active {
+    color: #f6c700; 
+}
+
+.NavbarLinks a:hover {
+    color: #f6c700;
+    text-decoration: underline;
+}
+
+.MainContainer {
+    flex: 1;
+    padding: 40px 80px;
+    background-color: #1b1b1b; 
+}
+
+/* whole contains: left + right*/
+.contact-wrapper {
+    display: flex;
+    gap: 40px;
+    max-width: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: 0 auto 40px;
+    align-items: flex-start; 
+}
+
+/* contact form */
+.contact-section {
+    background-color: #2e2e2e;
+    padding: 40px;
+    border-radius: 10px;
+    flex: 1;
+    color: #f8f7f9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.contact-section h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #1f1f1f;
+    color: #f8f7f9;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #f6c700;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #f6c700;
+    color: #1f1f1f;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #e5b500;
+}
+
+/* Right contact*/
+.contact-info {
+    background-color: #2e2e2e;
+    padding: 40px;
+    border-radius: 10px;
+    flex: 1;
+    width: 250px;
+    color: #f8f7f9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.contact-info h2 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    color: rgb(244, 214, 85);
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.contact-info a {
+    color: #f6c700;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-info img {
+    width: 40px;
+    height: 40px;
+    max-width: 100%; 
+    object-fit: contain; 
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #222;
+    color: #cac5c5; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; 
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); 
+    box-sizing: border-box; 
+}
+
+.Footer_Content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.Footer_Icons {
+    display: flex;
+    gap: 15px;
+}
+
+.Footer_Icons img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .TopContainer {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .NavbarLinks {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .NavbarLinks a {
+        font-size: 14px;
+    }
+
+    .MainContainer {
+        padding: 20px;
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+
+    .Footer_Icons img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .NavbarLinks a {
+        font-size: 12px;
+    }
+
+    .MainContainer {
+        padding: 15px;
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+
+    .Footer_Icons img {
+        width: 18px;
+        height: 18px;
+    }
+}

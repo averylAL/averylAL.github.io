@@ -17,11 +17,12 @@ body, html {
 
 /* Top Navigation */
 .TopContainer {
+  background-color: #222; 
+  padding: 15px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
-  background-color: #222;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .WebsiteLogo {
@@ -30,27 +31,44 @@ body, html {
   color: white;
 }
 
-.NavigationBar {
+.NavbarLinks {
   display: flex;
-  gap: 50px;
+  gap: 30px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.NavigationBar a {
-  color: white;
+.NavbarLinks a {
+  color: #f8f7f9;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
 }
 
-.NavigationBar a.active {
+.NavbarLinks a.active {
+  color: #f6c700; 
+}
+
+.NavbarLinks a:hover {
   color: #f6c700;
-}
-
-.NavigationBar a:hover {
   text-decoration: underline;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 90px;
+  background-color: #222;
+}
+
+.header h1 {
+  font-size: 24px;
+  color: white;
+  margin: 0;
+}
 /* Main Container */
-.MainContainer {
+.IntroMainContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,11 +80,18 @@ body, html {
   margin-bottom: 40px;
 }
 
+.Introduction_Text_Container > div {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
 .GreetingContent {
   font-size: 20px;
   margin-bottom: 10px;
   color: white;
   text-align: center;
+  animation-delay: 0.8s;
 }
 
 .Occupation {
@@ -80,12 +105,14 @@ body, html {
   color: white;
   line-height: 1.2;
   text-align: center;
+  animation-delay: 1.5s;
 }
 
 .Welcome_Text_Content {
   font-size: 18px;
   margin-top: 20px;
   text-align: center;
+  animation-delay: 1.9s;
 }
 
 .DynamicLine {
@@ -94,7 +121,20 @@ body, html {
   margin: 20px auto 0;
   background: linear-gradient(to right, #f6c700, #fcab4a, #5c79eb);
   animation: pulse 1.5s infinite;
+  margin-bottom: 20px;
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 @keyframes pulse {
   0%, 100% {
@@ -105,7 +145,7 @@ body, html {
   }
 }
 
-.HeadShotContainer {
+/* .HeadShotContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,12 +154,21 @@ body, html {
   border-radius: 50%;
   overflow: hidden;
   background-color: #333;
-}
+} */
 
 .AnimatedArrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 40px;
   color: #f6c700;
   animation: bounce 1.5s infinite;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #333;
+  margin: 0 auto;
 }
 
 @keyframes bounce {
@@ -157,6 +206,8 @@ body, html {
   margin-bottom: 20px;
   position: relative;
   padding-left: 30px;
+  background-color: #373735;
+  box-shadow: 0 2px 4px rgba(0, 0, 2.5, 3.5);
 }
 
 .timeline-item::before {
@@ -182,6 +233,31 @@ body, html {
   color: #ebe7e7;
 }
 
+.timeline-item p span.detailContent {
+  color: #f5f2f2;
+  font-size: 14px;
+}
+
+.work-details {
+  margin-bottom: 10px;
+}
+
+.work-details h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #f6c700;
+}
+
+.work-details p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #cccccc;
+}
+
+.work-details p .detailContent {
+  color: #f6c700;
+}
+
 .responsibilities {
   margin-top: 10px;
   padding-left: 20px;
@@ -192,6 +268,7 @@ body, html {
   margin-bottom: 5px;
   line-height: 1.6;
   color: #cccccc;
+  font-size: 15px;
 }
 
 /* Projects Section */

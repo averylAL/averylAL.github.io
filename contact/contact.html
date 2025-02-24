@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avery Liu Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./contact.css">
+  <link rel="icon" href="../images/logo.png" type="image/png">
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("dylupLvTBko7JHYDf");
+    })();
+    </script>
+</head>
+<body>
+  <div class="ProjectPage">
+    <header class="TopContainer">
+      <div class="WebsiteLogo">Avery Liu Portfolio</div>
+      <nav class="NavbarLinks">
+        <a href="../index.html">Home</a>
+        <a href="../aboutme/aboutme.html">About Me</a>
+        <a href="../projects/projects.html">Projects</a>
+        <a href="../skills/skills.html">Skills</a>
+        <a href="../contact/contact.html" class="active">Contact</a>
+      </nav>
+    </header>
+
+    <main class="MainContainer">
+        <div class="contact-wrapper">
+        <!-- Contact form -->
+            <section class="contact-section">
+                <h1>Contact Me</h1>
+                <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+                </form>
+            </section>
+  
+            <!-- Other contact method -->
+            <!-- <aside class="contact-info">
+                <h2>Let's Connect!</h2>
+                <ul>
+                  <li> 
+                    <a href="https://www.linkedin.com/in/averylew/" target="_blank">
+                    <img src="../images/linkedin_icon.png" alt="LinkedIn">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/averylAL/averylAL.github.io.git" target="_blank">
+                        <img src="../images/github_icon.png" alt="GitHub">
+                    </a>
+                  </li>
+                </ul>
+            </aside> -->
+        </div>
+    </main>
+
+    <footer class="footer">
+      <div class="Footer_Content">
+        <span>© 2025 Avery Liu</span>
+        <div class="Footer_Icons">
+          <a href="https://www.linkedin.com/in/averylew/" target="_blank">
+            <img src="../images/linkedin_icon.png" alt="LinkedIn">
+          </a>
+          <a href="https://github.com/averylAL/averylAL.github.io.git" target="_blank">
+            <img src="../images/github_icon.png" alt="GitHub">
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script type="text/javascript">
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+  
+        emailjs.sendForm('service_6bcib4s', 'template_b6u2t9n', this)
+        .then(function() {
+            alert("Message sent successfully!");
+        }, function(error) {
+            alert("Failed to send message. Please try again later.");
+            console.log("EmailJS error:", error);
+        });
+    });
+  </script>
+</body>
+</html>

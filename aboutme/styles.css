@@ -95,6 +95,8 @@ body, html {
     margin-bottom: 20px;
     position: relative;
     padding-left: 30px;
+    background-color: #373735;
+    box-shadow: 0 2px 4px rgba(0, 0, 2.5, 3.5);
 }
 
 .timeline-item::before {
@@ -122,7 +124,7 @@ body, html {
     color: #ebe7e7;
 }
 
-.timeline-item p span.location {
+.timeline-item p span.detailContent {
     color: #f5f2f2;
     font-size: 14px;
 }
@@ -143,7 +145,7 @@ body, html {
     color: #cccccc;
 }
   
-.work-details p .location {
+.work-details p .detailContent {
     color: #f6c700;
 }
   
@@ -157,6 +159,7 @@ body, html {
     margin-bottom: 5px;
     line-height: 1.6;
     color: #cccccc;
+    font-size: 14px;
 }
 
 .footer {
